@@ -11,9 +11,9 @@ public class IsPrimeAnagramAndPalindrome {
 		int num1,num2,cnt=0,primecnt=0;;
 		boolean palindromeResult=false,anagramResult=false;
 		
-		ArrayList<Integer> prime = new ArrayList<Integer>(); 
-		ArrayList<Integer> palindrome = new ArrayList<Integer>(); 
-		ArrayList<Integer> anagram = new ArrayList<Integer>(); 
+		List<Integer> prime = new ArrayList<>(); 
+		List<Integer> palindrome = new ArrayList<>(); 
+		List<Integer> anagram = new ArrayList<>(); 
 		
 					/*Prime*/
 		

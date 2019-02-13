@@ -45,6 +45,31 @@ public class Utility {
 	}
 	
 	/**
+	 * Function:To convert decimal To binary
+	 * @param binary:Integer Array
+	 * @param num: Integer Number
+	 * @return: Integer
+	 */
+	public static int integerToBinary(int []binary,int num)
+	{
+		int i=0,t;
+		for(i=0;num>0;i++)
+		{
+			binary[i] = num%2;
+			System.out.println("Binary number:="+binary[i]);
+			num=num/2;
+			System.out.println("the Number:="+num);
+		}
+		for(int j=i;j>=0;j--)
+		{
+			t=binary[j];
+			binary[j]=binary[i];
+			binary[i]=t;
+		}
+		return(i);
+	}
+	
+	/**
 	 * Function: Binary Search For Integer Value
 	 * @param searchArray: Array of Integers
 	 * @param half: Mid Position in an Array

@@ -13,6 +13,5 @@ public class PowerTable {
 			m=m*2;
 			System.out.println("2^"+i+"="+m);
 		}
-		
 	}
 }
