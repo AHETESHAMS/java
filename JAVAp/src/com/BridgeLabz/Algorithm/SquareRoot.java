@@ -4,18 +4,14 @@ import com.BridgeLabz.FunctionalPrograms.Utility;
 
 public class SquareRoot 
 {
-		public static void main(String[] args) throws Exception {
-			try 
-			{
+		public static void main(String[] args)  
+		{
 				System.out.println("Enter No to Find Square Root");
 				double c = Utility.singleIntegerInput();
 				System.out.println("square root is " + Util.sqrt(c));
-			} 
-			catch (Exception e) 
-			{
-				System.out.println("inter integer value "+e.getMessage());
-			}
+		} 
+			
 
-	}
 }
+
 

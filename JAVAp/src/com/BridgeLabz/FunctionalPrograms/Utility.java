@@ -6,31 +6,51 @@ import java.util.Random;
 public class Utility {
 	public static Scanner sc = new Scanner(System.in);
 
-	/* Single Integer Input */
+	/**
+	 * Function: To Take Single Integer Value as an Input
+	 * @return: Single Integer Value
+	 */
 
 	public static int singleIntegerInput() {
 		return (sc.nextInt());
 	}
 
-	/* Single Double Input */
+	/**
+	 * Function: To Take Single Double Value as an Input
+	 * @return: Single Double Value
+	 */
 
 	public static double singleDoubleInput() {
 		return (sc.nextDouble());
 	}
 
-	/* Single Boolean Input */
+	/**
+	 * Function: To Take Single Boolean Value as an Input
+	 * @return: Single Boolean Value
+	 */
+
 
 	public static boolean singleBooleanInput() {
 		return (sc.nextBoolean());
 	}
 
-	/* Single String Input */
+	/**
+	 * Function: To Take Single String Value as an Input
+	 * @return: Single String Value
+	 */
+
 
 	public static String singleStringInput() {
 		return (sc.next());
 	}
 	
-	/*Sarching for Integer*/
+	/**
+	 * Function: Binary Search For Integer Value
+	 * @param searchArray: Array of Integers
+	 * @param half: Mid Position in an Array
+	 * @param item: Element to Search
+	 * @param searchArrayLen: Length of Array
+	 */
 	
 	public static void searchInteger(int []searchArray,int half,int item,int searchArrayLen)
 	{
@@ -71,7 +91,11 @@ public class Utility {
 		 }
 	}
 	
-	/*Insertion Sort For Strings*/
+	/**
+	 * Function: To Perform Insertion Sort For Array Of String
+	 * @param names : Array Of String
+	 * @return: Sorted Array Of String
+	 */
 	
 	public static String[] insertionSort(String []names)
 	{
@@ -89,7 +113,11 @@ public class Utility {
 	}
 		
 	
-	/*Bubble sort for strings*/
+	/**
+	 * Function: To Perform Bubble Sort
+	 * @param names: Array Of Strings
+	 * @return: Sorted Array Of Strings
+	 */
 	public static String[] bubbleSort(String []names)
 	{
 		for (int j = 0; j < names.length; j++) 
@@ -108,7 +136,11 @@ public class Utility {
 		return(names);
 	}
 	
-	/*Searching for String*/
+	/**
+	 * Function: To Perform Searching For Strings
+	 * @param names: Array Of Strings
+	 * @param element: Element To Search
+	 */
 	public static void searchString(String []names,String element)
 	{
 		int n = names.length;
@@ -125,7 +157,12 @@ public class Utility {
 		}
 	}
 	
-	/*Check String Anagrams*/
+	/**
+	 * Function: To Check Anagrams
+	 * @param str1: First String value
+	 * @param str2: Second String value
+	 * @return; Boolean Value
+	 */
 	
 	public static boolean checkAnagrams(String str1,String str2)
 	{
@@ -164,7 +201,11 @@ public class Utility {
 		
 	}
 	
-	/*Check Prime Number*/
+	/**
+	 * Function: To check The Number is Prime Or Not
+	 * @param num:Integer number
+	 * @return Integer
+	 */
 	
 	public static int checkPrime(int num)
 	{
@@ -180,7 +221,11 @@ public class Utility {
 			return cnt;	
 	}	
 	
-	/*Checking Palindrome Number*/
+	/**
+	 * Function: To check number is palindrome or not
+	 * @param n; Integer Number
+	 * @return; Boolean Value
+	 */
 	
 	public static boolean checkPalindromeNumber(int n)
 	{
@@ -198,36 +243,55 @@ public class Utility {
 			return false;
 	}
 	
-	/*Calculating power*/
+	/**
+	 * Function: Give Raising To Given Power 
+	 * @param num: Integer Number
+	 * @param topower:Has Raised To Power
+	 * @return
+	 */
 	
-	public static double calPower(int v,double topower)
+	public static double calPower(int num,double topower)
 	{
-		double temp = Math.pow(v, topower);
+		double temp = Math.pow(num, topower);
 		return temp;
 	}
 	
-	/*Starting StopWatch*/
+	/**
+	 * Function: To Start StopWatch
+	 * @return: Long
+	 */
 	
 	public static Long start()
 	{
 		return(System.nanoTime());
 	}
 	
-	/*Stopping StopWatch*/
+	/**
+	 * Function: To Start StopWatch
+	 * @return; Long
+	 */
 	
 	public static Long stop()
 	{
 		return(System.nanoTime());
 	}
 
-	/*Calculating Time Ellapse of StopWatch*/
+	/**
+	 * 
+	 * @param start:Long Start value of stop watch
+	 * @param stop; Long Stop value of stop watch
+	 * @return: Long
+	 */
 	
 	public static Long timeEllapse(Long start,Long stop)
 	{
 		return((stop-start));
 	}
 
-	/* Checking Leap Year */
+	/**
+	 * Function: To Check Year is Leap Year or Not
+	 * @param year:Integer value of Year
+	 */
 
 	public static void checkLeapYear(int year) {
 		if (year % 400 == 0)
@@ -241,11 +305,9 @@ public class Utility {
 
 	}
 
-	/* Counting Leap Year Digits */
-
-	/**
-	 * @param year
-	 * @return
+	/**Function: To Count Digit of Year
+	 * @param year;Integer Value For Year
+	 * @return; Integer
 	 */
 	public static int countLeapYear(int year) {
 		int cnt = 0;
@@ -256,7 +318,10 @@ public class Utility {
 		return (cnt);
 	}
 
-	/* Generating Random Value */
+	/**
+	 * Function: To Generate a Random Value
+	 * @return; Boolean
+	 */
 
 	public static boolean randomValue() {
 		double result = Math.random();
@@ -268,13 +333,21 @@ public class Utility {
 
 	}
 
-	/* Calculating percentage of head and tail */
+	/**
+	 * Function: To Count Perecentage Of Head And Tail
+	 * @param self:Integer Value Of Head Or Tail
+	 * @param iterations:Integer Total Number of Iterations
+	 * @return: Percentage
+	 */
 
 	public static int calPercentage(int self, int iterations) {
 		return (self * 100 / iterations);
 	}
 
-	/* User Verification */
+	/**
+	 * Function: To Check Length Of String
+	 * @param name:String Array
+	 */
 
 	public static void checkUserLength(String name) {
 
@@ -289,7 +362,11 @@ public class Utility {
 
 	}
 
-	/* Check Rows tic tac toe */
+	/**
+	 * Function: To Check Rows Of Game
+	 * @param game: Integer Array
+	 * @return: Boolean
+	 */
 
 	public static boolean checkRows(char game[][]) {
 		for(int i=0;i<3;i++)
@@ -308,7 +385,11 @@ public class Utility {
 
 	}
 
-	/* Check Columns tic tac toe */
+	/**
+	 * Function: To Check Rows Of Game
+	 * @param game: Integer Array
+	 * @return: Boolean
+	 */
 
 	public static int checkColumns(int player1sign, int game[][]) {
 		int cnt = 0;
@@ -323,7 +404,11 @@ public class Utility {
 
 	}
 
-	/* Check Right Diagonal tic tac toe */
+	/**
+	 * Function: To Check Rows Of Game
+	 * @param game: Integer Array
+	 * @return: Boolean
+	 */
 
 	public static int checkRightDiagonal(int player1sign, int game[][]) {
 		int cnt = 0;
@@ -336,7 +421,11 @@ public class Utility {
 
 	}
 
-	/* Check Left Diagonal tic tac toe */
+	/**
+	 * Function: To Check Rows Of Game
+	 * @param game: Integer Array
+	 * @return: Boolean
+	 */
 
 	public static int checkLeftDiagonal(char player1sign, char game[][]) {
 		int cnt = 0;
@@ -353,7 +442,10 @@ public class Utility {
 
 	}
 
-	/* Display tic tac toe */
+	/**
+	 * Function: To Display Tic Tac Toe
+	 * @param game: Array Of Integers
+	 */
 
 	public static void displayGame(char[][] game) {
 		for (int i = 0; i < 3; i++) {
@@ -364,7 +456,11 @@ public class Utility {
 		}
 	}
 
-	/* tic tac toe Game input */
+	/**
+	 * Function: To Take An Input For Tic Tac Toe
+	 * @param player: Integer Value
+	 * @param game: Integer Array
+	 */
 	public static void gameInput(int player, char[][] game) {
 		int x, y;
 		Random r = new Random();

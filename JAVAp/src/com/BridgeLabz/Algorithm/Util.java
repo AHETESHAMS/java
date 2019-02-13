@@ -49,6 +49,30 @@ public class Util {
 
 		return t;
 	}
+	
+	/**
+	 * Function: Convert Celsius to Fahrenheit vice versa
+	 * @param temp: integer value for Temperature
+	 * @param choice: Choice among Celsius and Fahrenheit
+	 * @return: Converted Result
+	 */
+	
+	static int temperatureConverter(int temp,int choice)
+	{
+		int result=0;
+		if(choice == 1)
+		{
+			result = (temp * 9/5) + 32;
+			return result;
+		}
+		else
+		{
+			result = (temp - 32) * 5/9;
+			return result;
+		
+		}
+		
+	}
 
 
 }
