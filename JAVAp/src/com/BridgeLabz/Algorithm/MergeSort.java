@@ -10,7 +10,6 @@ public class MergeSort {
 	        System.out.println("Given Array"); 
 	        Utility.printArray(arr); 
 	  
-	        MergeSort ob = new MergeSort(); 
 	        Utility.sort(arr, 0, arr.length-1); 
 	  
 	        System.out.println("\nSorted array"); 
@@ -18,5 +17,6 @@ public class MergeSort {
 	    } 
 
 	}
+
 
 
