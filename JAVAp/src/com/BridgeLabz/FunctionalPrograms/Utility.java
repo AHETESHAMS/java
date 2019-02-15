@@ -271,20 +271,17 @@ public class Utility {
 	 * @param names: Array Of Strings
 	 * @param element: Element To Search
 	 */
-	public static void searchString(String []names,String element)
+	public static boolean searchString(String []names,String element)
 	{
 		int n = names.length;
-		boolean found = false;
-		for (int i=0;i<n;i++) {
-		    if ( names[i].equals(element)) {
-		        found = true;
-		        System.out.println( "The value is found!");
-		        break;
+		for (int i=0;i<n;i++) 
+		{
+		    if ( names[i].equals(element)) 
+		    {
+		        return true;
 		    }
 		}
-		if (!found) {
-		    System.out.println( "The value is not found!" );
-		}
+		return false;
 	}
 	
 	/**
@@ -498,80 +495,23 @@ public class Utility {
 	 * @return: Boolean
 	 */
 
-	public static boolean checkRows(char game[][]) {
-		for(int i=0;i<3;i++)
-		{
-			for(int j=0;j<3;j++)
-			{
-				if(game[i][j] == 'x' && game[i][j] == 'x' && game[i][j] == 'x')
-				{
-					return(true);
-				}
-				else
+	public static boolean checkRows(char game[][],char ch) {
+		
+				if((game[0][0] == ch && game[0][1] == ch && game[0][2] == ch)
+						|| (game[1][0] == ch && game[1][1] == ch && game[1][2] == 'x')
+						|| (game[2][0] == ch && game[2][1] == ch && game[2][2] == 'x')
+						|| (game[0][0] == ch && game[1][0] == ch && game[2][0] == 'x')
+						|| (game[0][1] == ch && game[1][1] == ch && game[2][1] == 'x')
+						|| (game[0][2] == ch && game[1][2] == ch && game[2][2] == 'x')
+						|| (game[0][0] == ch && game[1][1] == ch && game[2][2] == 'x')
+						|| (game[0][2] == ch && game[1][1] == ch && game[2][0] == 'x'))
+					{
+						return(true);
+					}
+					else
 					return(false);			
-			}
-		}
-		return false;
-
+			
 	}
-
-	/**
-	 * Function: To Check Rows Of Game
-	 * @param game: Integer Array
-	 * @return: Boolean
-	 */
-
-	public static int checkColumns(int player1sign, int game[][]) {
-		int cnt = 0;
-		for (int i = 0; i < 3; i++) {
-			cnt = 0;
-			for (int j = 0; j < 3; j++) {
-				if (game[j][i] == player1sign)
-					cnt++;
-			}
-		}
-		return (cnt);
-
-	}
-
-	/**
-	 * Function: To Check Rows Of Game
-	 * @param game: Integer Array
-	 * @return: Boolean
-	 */
-
-	public static int checkRightDiagonal(int player1sign, int game[][]) {
-		int cnt = 0;
-		for (int i = 0; i < 3; i++) {
-			if (game[i][i] == player1sign)
-				cnt++;
-		}
-
-		return cnt;
-
-	}
-
-	/**
-	 * Function: To Check Rows Of Game
-	 * @param game: Integer Array
-	 * @return: Boolean
-	 */
-
-	public static int checkLeftDiagonal(char player1sign, char game[][]) {
-		int cnt = 0;
-		for (int i = 0; i < 3; i++) {
-			int j = 2;
-
-			if (game[i][j] == player1sign)
-				cnt++;
-
-			j--;
-		}
-
-		return cnt;
-
-	}
-
 	/**
 	 * Function: To Display Tic Tac Toe
 	 * @param game: Array Of Integers
@@ -611,7 +551,7 @@ public class Utility {
 				{
 					boolean temp;
 					game[x][y] = 'x';
-					temp = Utility.checkRows(game);
+					temp = Utility.checkRows(game,'x');
 					if(temp==true)
 					{
 						System.out.print("Player 1 won");
@@ -629,15 +569,20 @@ public class Utility {
 				} 
 				else 
 				{
-					int cnt=0;
 					game[x][y] = 'o';
+					boolean temp = Utility.checkRows(game,'o');
+					if(temp==true)
+					{
+						System.out.print("Computer won");
+						break;
+					}	
 					player = 1;
 				}
 			}
 
-			System.out.println();
 			Utility.displayGame(game);
 		}
+	
 	}
 
 	
