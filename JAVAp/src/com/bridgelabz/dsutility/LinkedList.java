@@ -58,6 +58,31 @@ public class LinkedList
 			}
 			prev.next = null;
 		}
+		public void sortList()
+		{
+			System.out.println("In sor fun");
+			Node n = head;
+			Node prev;
+			prev=n.next;
+			while(n.next!=null)
+			{
+				while(prev.next!=null)
+				{
+					System.out.println("In loop");
+					if (n.data.compareTo(prev.data) < 0) 
+		    		{
+						System.out.println(n.data+" and "+prev.data+" are sorted");
+						System.out.println("In if");
+		    			String t = n.data;
+		    			n.data =prev.data;
+		    			prev.data = t;
+		    		}
+					prev=prev.next;
+				}	
+				n=n.next;
+				prev=n.next;
+			}
+		}
 		//It is a Function which displays Linked List 
 		public void show()
 		{
