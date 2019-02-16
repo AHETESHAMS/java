@@ -1,5 +1,7 @@
 package com.bridgelabz.dsutility;
 import java.io.*;
+
+import com.BridgeLabz.FunctionalPrograms.Utility;
 public class DSUtility {
 	
 	/**
@@ -70,6 +72,11 @@ public class DSUtility {
 			
 	}
 	
+	/**
+	 * Function: Checks Whether parenthesis are not balanced
+	 * @param exp: character array
+	 * @return: boolean
+	 */
 	public static boolean areParenthesBalance(char exp[])
 	{
 		Stack st = new Stack();
@@ -96,5 +103,29 @@ public class DSUtility {
 			return false;
 		}	
 	}
+	
+	public static int deposit(int balance)
+	{
+		int amnt=0;
+		System.out.println("Enter Amount to Deposit:=");
+		amnt = Utility.singleIntegerInput();
+		balance = balance+amnt;
+		return balance;
+	}
+	
+	public static int withDraw(int balance)
+	{
+		int amnt=0;
+		System.out.println("Enter the Cash Amount to Withdraw:=");
+		amnt = Utility.singleIntegerInput();
+		if(amnt > balance)
+			throw new ArithmeticException("Insufficient Balance");
+		else
+		{
+			balance = balance-amnt;
+		}
+		return balance;
+	}
+	
 		
 }
