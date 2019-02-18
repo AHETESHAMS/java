@@ -60,7 +60,7 @@ public class LinkedList
 		}
 		public void sortList()
 		{
-			System.out.println("In sor fun");
+			System.out.println("In sort fun");
 			Node n = head;
 			Node prev;
 			prev=n.next;
@@ -68,14 +68,13 @@ public class LinkedList
 			{
 				while(prev.next!=null)
 				{
-					System.out.println("In loop");
-					if (n.data.compareTo(prev.data) < 0) 
+					int a = Integer.parseInt(n.data);
+					int b = Integer.parseInt(prev.data);
+					if (a>b) 
 		    		{
-						System.out.println(n.data+" and "+prev.data+" are sorted");
-						System.out.println("In if");
-		    			String t = n.data;
-		    			n.data =prev.data;
-		    			prev.data = t;
+		    			int t = a;
+		    			n.data=String.valueOf(b);
+		    			prev.data = String.valueOf(t);
 		    		}
 					prev=prev.next;
 				}	

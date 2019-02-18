@@ -21,7 +21,6 @@ public class BankingCashCounter {
 				System.out.println("Queue is Full!");
 
 			}	
-			
 		}
 		do
 		{
