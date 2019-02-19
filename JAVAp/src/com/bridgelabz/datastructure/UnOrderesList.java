@@ -1,5 +1,6 @@
 /**
  * Agenda:
+
  * 	a.Read the Text from a file, split it into words and arrange it as Linked List.
 	Take a user input to search a Word in the List. If the Word is not found then add it
 	to the list, and if it found then remove the word from the List. In the end save the
@@ -28,13 +29,13 @@ public class UnOrderesList {
 			//Calling to readFile function to read a file
 			word = DSUtility.readFile(word);
 			
-			for(int i=0;i<word.length;i++)
+			for(String item : word)
 			{
-				wordList.insertAtLast(word[i]);
+				wordList.insertAtLast(item);
 			}
 			//Calling to show function to display Linked List
 			wordList.show();
-			System.out.println("Enter a Word:=");
+			System.out.println("Enter a Number:=");
 			//calling to function to get an input from user
 			element = Utility.singleStringInput();
 			//calling to search function to search element in Linked List

@@ -1,7 +1,5 @@
 package com.bridgelabz.datastructure;
-
 import java.util.ArrayList;
-
 import com.BridgeLabz.FunctionalPrograms.Utility;
 
 public class Prime2D {
@@ -32,11 +30,8 @@ public class Prime2D {
 			}	
 		
 		}
-		for(int j=0;j<10;j++)
-			System.out.println(primeList[j]);
+		for(ArrayList listItem : primeList)
+			System.out.println(listItem);
 		
-		/*checking an anagram and storing into list of anagrams*/
-		
-
 	}
 }

@@ -1,9 +1,7 @@
 /**
  * Class Node: Contains Two objects one will hold Data of String Type 
  * other will hold address of another node of type node.
- * 
  * class LinkedList: Contains functions to operate the LinkedList.  
- *
  */
 package com.bridgelabz.dsutility;
 //class Node: Contains structure of Node
@@ -12,7 +10,7 @@ class Node
 	String data;
 	Node next;
 }
-//class LinkedList: Contains structure of structure of LinkedList
+//class LinkedList: Contains structure and functions of structure of LinkedList
 public class LinkedList
 	{
 		Node head = null;
@@ -58,6 +56,7 @@ public class LinkedList
 			}
 			prev.next = null;
 		}
+		//It is a function That performs sorting for elements of nodes
 		public void sortList()
 		{
 			System.out.println("In sort fun");
@@ -104,7 +103,7 @@ public class LinkedList
 			head=n.next;
 			return n.data;
 		}
-
+		//It is a which which check whether a list is empty or not
 		public boolean isEmpty() {
 			if(head==null) {
 				return true;
