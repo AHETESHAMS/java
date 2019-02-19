@@ -15,7 +15,7 @@ public class AnagramStack {
 		int num2,cnt=0;
 		boolean anagramResult=false;	
 		
-					/*Prime*/
+		//Picking up a Prime number
 		
 		for(num1=1;num1<=1000;num1++)
 		{			
@@ -28,7 +28,7 @@ public class AnagramStack {
 		System.out.println("List of Prime Numbers:");
 		System.out.println(prime);
 		
-					/*Anagram*/
+		//Picking up an anagram number
 		
 		for(int i=7;i<prime.size();i++)
 		{
@@ -53,7 +53,7 @@ public class AnagramStack {
 		System.out.println("List of Anagram Prime Numbers:");
 		System.out.println(anagram);
 		
-			/*Anagrams push and pop using Stack*/
+		//Anagrams push and pop using Stack
 		
 		Stack anagramStack = new Stack();
 		char a;

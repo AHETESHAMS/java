@@ -15,7 +15,7 @@ public class Anagram2D extends Prime2D
 		int num2,cnt=0,primecnt=0;;
 		boolean palindromeResult=false,anagramResult=false;	
 		
-					/*Prime*/
+		//picking up a Prime number
 		
 		for(num1=1;num1<=1000;num1++)
 		{			
@@ -28,7 +28,7 @@ public class Anagram2D extends Prime2D
 		System.out.println("List of Prime Numbers:");
 		System.out.println(prime);
 		
-					/*Anagram*/
+		//picking up an anagram number
 		
 		for(int i=7;i<prime.size();i++)
 		{

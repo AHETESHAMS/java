@@ -14,7 +14,10 @@ class Node
 public class LinkedList
 	{
 		Node head = null;
-		//It is function that performs insert node operation
+		/**
+		 * Function : Function which Performs Insert operation on LinkedList
+		 * @param data : String Value
+		 */
 		public void insertAtLast(String data)
 		{
 			Node node = new Node();
@@ -35,7 +38,10 @@ public class LinkedList
 				n.next = node;
 			}
 		}
-		//It is a function That performs delete node operation
+		/**
+		 * Function : Function Which Delete Elements from Linked List 
+		 * @param element : String Value
+		 */
 		public void delete(String element)
 		{
 			Node n = head;
@@ -56,10 +62,11 @@ public class LinkedList
 			}
 			prev.next = null;
 		}
-		//It is a function That performs sorting for elements of nodes
+		/**
+		 * Function : Function to Sort a Linked List
+		 */
 		public void sortList()
 		{
-			System.out.println("In sort fun");
 			Node n = head;
 			Node prev;
 			prev=n.next;
@@ -90,7 +97,7 @@ public class LinkedList
 				System.out.print(n.data+" ");
 				n = n.next;
 			}
-			System.out.println(n.data);
+			System.out.print(n.data+" ");
 		}
 		
 		public String get()
@@ -102,6 +109,18 @@ public class LinkedList
 			}
 			head=n.next;
 			return n.data;
+		}
+		//
+		public boolean search(String element)
+		{
+			Node n =head;
+			while(n!=null)
+			{
+				if(element.equals(n.data))
+					return true;
+				n = n.next;
+			}
+			return false;
 		}
 		//It is a which which check whether a list is empty or not
 		public boolean isEmpty() {

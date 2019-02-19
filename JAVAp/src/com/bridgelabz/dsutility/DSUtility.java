@@ -39,7 +39,9 @@ public class DSUtility {
 			try
 				{
 					
-					BufferedWriter bw = new BufferedWriter(new FileWriter("xyz.txt"));
+					BufferedWriter bw = new BufferedWriter(new FileWriter("xyz.txt",true));
+					
+					
 					while(!wordList.isEmpty()) {
 						bw.write(wordList.get()+" ");
 					}

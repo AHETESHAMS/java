@@ -7,7 +7,10 @@ public class Stack {
 	
 	char[] items = new char [100];
 	int top = -1;
-	//It is a Function which performs push operation
+	/**
+	 * Function : To push Element in a Stack
+	 * @param x : Is a character value
+	 */
 	public void push(char x) 
 	{
 		if(isFull())
@@ -19,7 +22,10 @@ public class Stack {
 			items[++top] = x;
 		}
 	}
-	//It is a function which performs pop operation
+	/**
+	 * Function : To pop Element from Stack
+	 * @return : Character value
+	 */
 	public char pop()	
 	{
 		if(isEmpty())
@@ -34,10 +40,18 @@ public class Stack {
 			return element;
 		}
 	}
+	/**
+	 * Function : Which checks whether stack is full or not 
+	 * @return : boolean
+	 */
 	public boolean isFull()
 	{
 		return(top == 99)? true : false;
 	}
+	/**
+	 * Function : To check whether Stack is Empty or not
+	 * @return : boolean
+	 */
 	public boolean isEmpty()
 	{
 		return(top == -1)? true : false;
