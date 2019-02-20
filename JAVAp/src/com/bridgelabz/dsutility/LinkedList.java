@@ -63,6 +63,39 @@ public class LinkedList
 			prev.next = null;
 		}
 		/**
+		 * Function : To delete element at first
+		 */
+		public String deleteAtFirst()
+		{
+			String item;
+			Node n = head;
+			head = n.next;
+			item = n.data;
+			return item;
+		}
+		/**
+		 * 
+		 */
+		public String deleteAtLast()
+		{
+			Node n = head;
+			n = n.next;
+			Node prev = head;
+			if(head == null)
+				return null;
+			else
+			{
+				while(n.next!=null)
+				{
+					prev = n;
+					n = n.next;
+				}	
+				String data = prev.data;
+				prev.next = null;
+				return(data);
+			}
+		}
+		/**
 		 * Function : Function to Sort a Linked List
 		 */
 		public void sortList()
@@ -110,7 +143,7 @@ public class LinkedList
 			head=n.next;
 			return n.data;
 		}
-		//
+		//Function to search element in a Linked List
 		public boolean search(String element)
 		{
 			Node n =head;

@@ -1,29 +1,24 @@
 package com.bridgelabz.datastructure;
-
 import com.BridgeLabz.FunctionalPrograms.Utility;
-import com.bridgelabz.dsutility.Queue;
-
+import com.bridgelabz.dsutility.LinkedList;
 public class PalindromeChecker {
 
 	public static void main(String[] args) 
 	{
-		int j=0;
 		System.out.print("Enter any string:");
         String inputString = Utility.singleStringInput();
-        Queue queue = new Queue(4);
+        char []charArray = inputString.toCharArray(); 
+        LinkedList palindromeQueue = new LinkedList();
         System.out.println("Queue is created");
         for (int i = inputString.length()-1; i >=0; i--) {
-        	System.out.println("In loop");
-            queue.add(inputString.charAt(i));
+        	palindromeQueue.insertAtLast(Character.toString(charArray[i]));
      }
      String reverseString = "";
-     while (!queue.isEmpty(queue)) 
+     for(int i=0;i<inputString.length();i++) 
      {
-    	 System.out.println("In While loop");
-         reverseString = reverseString+queue.remove();
-         System.out.println("String is:="+reverseString);
+         reverseString = reverseString+palindromeQueue.deleteAtFirst();   
      }
-        System.out.println("String is:="+reverseString);
+        System.out.println("Reverse String is:="+reverseString);
         if (inputString.equals(reverseString))
             System.out.println("The input String is a palindrome.");
         else
