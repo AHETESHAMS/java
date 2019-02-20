@@ -78,19 +78,18 @@ public class LinkedList
 		 */
 		public String deleteAtLast()
 		{
-			Node n = head;
-			n = n.next;
-			Node prev = head;
 			if(head == null)
 				return null;
 			else
 			{
+				Node n = head;
+				Node prev = head;
 				while(n.next!=null)
 				{
 					prev = n;
 					n = n.next;
 				}	
-				String data = prev.data;
+				String data = n.data;
 				prev.next = null;
 				return(data);
 			}

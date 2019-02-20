@@ -37,11 +37,20 @@ public class CalendarStack {
             {
             	calendarStack2.insertAtLast(calendarStack1.deleteAtLast());
             }
-            calendarStack2.show();
             String item = calendarStack1.deleteAtLast();
-            System.out.println("Item:="+item);
-		}    
+            for (int i = 0; i < spaces; i++)
+                System.out.print("     ");
+            for(int i=1;i<=days[M];i++)
+            {
+         
+            	 System.out.printf(" %3d ", Integer.parseInt(calendarStack2.deleteAtLast()));
+            	if (((i + spaces) % 7 == 0) || (i == days[M])) System.out.println();
+            }	
+            System.out.println();
+
+		}   
+		
 
 	}
-
+	
 }
